@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="330" viewBox="0 0 760 330" role="img" aria-labelledby="title desc">
+  <title id="title">Animated selection sort</title>
+  <desc id="desc">Selection sort animation for the array 64, 25, 12, 22, 11, ending at 11, 12, 22, 25, 64.</desc>
+  <defs>
+    <style>
+      text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; fill: #1f2937; }
+      .heading { font: 700 22px system-ui, sans-serif; }
+      .sub { font: 14px system-ui, sans-serif; fill: #6b7280; }
+      .value { font-size: 24px; font-weight: 700; }
+      .index { font-size: 12px; fill: #6b7280; }
+      .note { font: 600 14px system-ui, sans-serif; }
+      .cell { fill: #ffffff; stroke: #9ca3af; stroke-width: 2; rx: 12; }
+      .sorted { fill: #ecfdf5; stroke: #10b981; }
+      .minimum { fill: #fff7ed; stroke: #f59e0b; stroke-width: 3; }
+      .compare { fill: #eff6ff; stroke: #3b82f6; stroke-width: 3; }
+      .legend { font: 13px system-ui, sans-serif; fill: #4b5563; }
+      @media (prefers-color-scheme: dark) {
+        text { fill: #f3f4f6; }
+        .sub, .index, .legend { fill: #9ca3af; }
+        .cell { fill: #111827; stroke: #6b7280; }
+        .sorted { fill: #052e24; stroke: #34d399; }
+        .minimum { fill: #451a03; stroke: #fbbf24; }
+        .compare { fill: #172554; stroke: #60a5fa; }
+      }
+    </style>
+  </defs>
+
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.02;0.90;1" dur="1.500s" begin="0.000s" fill="freeze" repeatCount="1"/>
+    <text x="380.0" y="42" text-anchor="middle" class="heading">Pass 1 — start</text>
+    <text x="380.0" y="68" text-anchor="middle" class="sub">Search the whole array for the minimum</text>
+    <rect x="118.0" y="138" width="92" height="72" class="cell minimum"/>
+    <text x="164.0" y="182" text-anchor="middle" class="value">64</text>
+    <text x="164.0" y="230" text-anchor="middle" class="index">index 0</text>
+    <rect x="226.0" y="138" width="92" height="72" class="cell compare"/>
+    <text x="272.0" y="182" text-anchor="middle" class="value">25</text>
+    <text x="272.0" y="230" text-anchor="middle" class="index">index 1</text>
+    <rect x="334.0" y="138" width="92" height="72" class="cell"/>
+    <text x="380.0" y="182" text-anchor="middle" class="value">12</text>
+    <text x="380.0" y="230" text-anchor="middle" class="index">index 2</text>
+    <rect x="442.0" y="138" width="92" height="72" class="cell"/>
+    <text x="488.0" y="182" text-anchor="middle" class="value">22</text>
+    <text x="488.0" y="230" text-anchor="middle" class="index">index 3</text>
+    <rect x="550.0" y="138" width="92" height="72" class="cell"/>
+    <text x="596.0" y="182" text-anchor="middle" class="value">11</text>
+    <text x="596.0" y="230" text-anchor="middle" class="index">index 4</text>
+    <text x="380.0" y="268" text-anchor="middle" class="note">Current minimum: 64</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.02;0.90;1" dur="1.500s" begin="1.500s" fill="freeze" repeatCount="1"/>
+    <text x="380.0" y="42" text-anchor="middle" class="heading">Pass 1 — scanning</text>
+    <text x="380.0" y="68" text-anchor="middle" class="sub">11 is the smallest value</text>
+    <rect x="118.0" y="138" width="92" height="72" class="cell"/>
+    <text x="164.0" y="182" text-anchor="middle" class="value">64</text>
+    <text x="164.0" y="230" text-anchor="middle" class="index">index 0</text>
+    <rect x="226.0" y="138" width="92" height="72" class="cell"/>
+    <text x="272.0" y="182" text-anchor="middle" class="value">25</text>
+    <text x="272.0" y="230" text-anchor="middle" class="index">index 1</text>
+    <rect x="334.0" y="138" width="92" height="72" class="cell"/>
+    <text x="380.0" y="182" text-anchor="middle" class="value">12</text>
+    <text x="380.0" y="230" text-anchor="middle" class="index">index 2</text>
+    <rect x="442.0" y="138" width="92" height="72" class="cell"/>
+    <text x="488.0" y="182" text-anchor="middle" class="value">22</text>
+    <text x="488.0" y="230" text-anchor="middle" class="index">index 3</text>
+    <rect x="550.0" y="138" width="92" height="72" class="cell minimum"/>
+    <text x="596.0" y="182" text-anchor="middle" class="value">11</text>
+    <text x="596.0" y="230" text-anchor="middle" class="index">index 4</text>
+    <text x="380.0" y="268" text-anchor="middle" class="note">Minimum found: 11</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.02;0.90;1" dur="1.500s" begin="3.000s" fill="freeze" repeatCount="1"/>
+    <text x="380.0" y="42" text-anchor="middle" class="heading">Pass 1 — swap</text>
+    <text x="380.0" y="68" text-anchor="middle" class="sub">Swap 64 and 11</text>
+    <rect x="118.0" y="138" width="92" height="72" class="cell sorted"/>
+    <text x="164.0" y="182" text-anchor="middle" class="value">11</text>
+    <text x="164.0" y="230" text-anchor="middle" class="index">index 0</text>
+    <rect x="226.0" y="138" width="92" height="72" class="cell"/>
+    <text x="272.0" y="182" text-anchor="middle" class="value">25</text>
+    <text x="272.0" y="230" text-anchor="middle" class="index">index 1</text>
+    <rect x="334.0" y="138" width="92" height="72" class="cell"/>
+    <text x="380.0" y="182" text-anchor="middle" class="value">12</text>
+    <text x="380.0" y="230" text-anchor="middle" class="index">index 2</text>
+    <rect x="442.0" y="138" width="92" height="72" class="cell"/>
+    <text x="488.0" y="182" text-anchor="middle" class="value">22</text>
+    <text x="488.0" y="230" text-anchor="middle" class="index">index 3</text>
+    <rect x="550.0" y="138" width="92" height="72" class="cell"/>
+    <text x="596.0" y="182" text-anchor="middle" class="value">64</text>
+    <text x="596.0" y="230" text-anchor="middle" class="index">index 4</text>
+    <text x="380.0" y="268" text-anchor="middle" class="note">11 is now in its final position</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.02;0.90;1" dur="1.500s" begin="4.500s" fill="freeze" repeatCount="1"/>
+    <text x="380.0" y="42" text-anchor="middle" class="heading">Pass 2 — scanning</text>
+    <text x="380.0" y="68" text-anchor="middle" class="sub">Search from index 1 onward</text>
+    <rect x="118.0" y="138" width="92" height="72" class="cell sorted"/>
+    <text x="164.0" y="182" text-anchor="middle" class="value">11</text>
+    <text x="164.0" y="230" text-anchor="middle" class="index">index 0</text>
+    <rect x="226.0" y="138" width="92" height="72" class="cell"/>
+    <text x="272.0" y="182" text-anchor="middle" class="value">25</text>
+    <text x="272.0" y="230" text-anchor="middle" class="index">index 1</text>
+    <rect x="334.0" y="138" width="92" height="72" class="cell minimum"/>
+    <text x="380.0" y="182" text-anchor="middle" class="value">12</text>
+    <text x="380.0" y="230" text-anchor="middle" class="index">index 2</text>
+    <rect x="442.0" y="138" width="92" height="72" class="cell"/>
+    <text x="488.0" y="182" text-anchor="middle" class="value">22</text>
+    <text x="488.0" y="230" text-anchor="middle" class="index">index 3</text>
+    <rect x="550.0" y="138" width="92" height="72" class="cell"/>
+    <text x="596.0" y="182" text-anchor="middle" class="value">64</text>
+    <text x="596.0" y="230" text-anchor="middle" class="index">index 4</text>
+    <text x="380.0" y="268" text-anchor="middle" class="note">Minimum found: 12</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.02;0.90;1" dur="1.500s" begin="6.000s" fill="freeze" repeatCount="1"/>
+    <text x="380.0" y="42" text-anchor="middle" class="heading">Pass 2 — swap</text>
+    <text x="380.0" y="68" text-anchor="middle" class="sub">Swap 25 and 12</text>
+    <rect x="118.0" y="138" width="92" height="72" class="cell sorted"/>
+    <text x="164.0" y="182" text-anchor="middle" class="value">11</text>
+    <text x="164.0" y="230" text-anchor="middle" class="index">index 0</text>
+    <rect x="226.0" y="138" width="92" height="72" class="cell sorted"/>
+    <text x="272.0" y="182" text-anchor="middle" class="value">12</text>
+    <text x="272.0" y="230" text-anchor="middle" class="index">index 1</text>
+    <rect x="334.0" y="138" width="92" height="72" class="cell"/>
+    <text x="380.0" y="182" text-anchor="middle" class="value">25</text>
+    <text x="380.0" y="230" text-anchor="middle" class="index">index 2</text>
+    <rect x="442.0" y="138" width="92" height="72" class="cell"/>
+    <text x="488.0" y="182" text-anchor="middle" class="value">22</text>
+    <text x="488.0" y="230" text-anchor="middle" class="index">index 3</text>
+    <rect x="550.0" y="138" width="92" height="72" class="cell"/>
+    <text x="596.0" y="182" text-anchor="middle" class="value">64</text>
+    <text x="596.0" y="230" text-anchor="middle" class="index">index 4</text>
+    <text x="380.0" y="268" text-anchor="middle" class="note">12 joins the sorted prefix</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.02;0.90;1" dur="1.500s" begin="7.500s" fill="freeze" repeatCount="1"/>
+    <text x="380.0" y="42" text-anchor="middle" class="heading">Pass 3 — scanning</text>
+    <text x="380.0" y="68" text-anchor="middle" class="sub">Search from index 2 onward</text>
+    <rect x="118.0" y="138" width="92" height="72" class="cell sorted"/>
+    <text x="164.0" y="182" text-anchor="middle" class="value">11</text>
+    <text x="164.0" y="230" text-anchor="middle" class="index">index 0</text>
+    <rect x="226.0" y="138" width="92" height="72" class="cell sorted"/>
+    <text x="272.0" y="182" text-anchor="middle" class="value">12</text>
+    <text x="272.0" y="230" text-anchor="middle" class="index">index 1</text>
+    <rect x="334.0" y="138" width="92" height="72" class="cell"/>
+    <text x="380.0" y="182" text-anchor="middle" class="value">25</text>
+    <text x="380.0" y="230" text-anchor="middle" class="index">index 2</text>
+    <rect x="442.0" y="138" width="92" height="72" class="cell minimum"/>
+    <text x="488.0" y="182" text-anchor="middle" class="value">22</text>
+    <text x="488.0" y="230" text-anchor="middle" class="index">index 3</text>
+    <rect x="550.0" y="138" width="92" height="72" class="cell"/>
+    <text x="596.0" y="182" text-anchor="middle" class="value">64</text>
+    <text x="596.0" y="230" text-anchor="middle" class="index">index 4</text>
+    <text x="380.0" y="268" text-anchor="middle" class="note">Minimum found: 22</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.02;0.90;1" dur="1.500s" begin="9.000s" fill="freeze" repeatCount="1"/>
+    <text x="380.0" y="42" text-anchor="middle" class="heading">Pass 3 — swap</text>
+    <text x="380.0" y="68" text-anchor="middle" class="sub">Swap 25 and 22</text>
+    <rect x="118.0" y="138" width="92" height="72" class="cell sorted"/>
+    <text x="164.0" y="182" text-anchor="middle" class="value">11</text>
+    <text x="164.0" y="230" text-anchor="middle" class="index">index 0</text>
+    <rect x="226.0" y="138" width="92" height="72" class="cell sorted"/>
+    <text x="272.0" y="182" text-anchor="middle" class="value">12</text>
+    <text x="272.0" y="230" text-anchor="middle" class="index">index 1</text>
+    <rect x="334.0" y="138" width="92" height="72" class="cell sorted"/>
+    <text x="380.0" y="182" text-anchor="middle" class="value">22</text>
+    <text x="380.0" y="230" text-anchor="middle" class="index">index 2</text>
+    <rect x="442.0" y="138" width="92" height="72" class="cell"/>
+    <text x="488.0" y="182" text-anchor="middle" class="value">25</text>
+    <text x="488.0" y="230" text-anchor="middle" class="index">index 3</text>
+    <rect x="550.0" y="138" width="92" height="72" class="cell"/>
+    <text x="596.0" y="182" text-anchor="middle" class="value">64</text>
+    <text x="596.0" y="230" text-anchor="middle" class="index">index 4</text>
+    <text x="380.0" y="268" text-anchor="middle" class="note">22 joins the sorted prefix</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.02;0.90;1" dur="1.500s" begin="10.500s" fill="freeze" repeatCount="1"/>
+    <text x="380.0" y="42" text-anchor="middle" class="heading">Pass 4</text>
+    <text x="380.0" y="68" text-anchor="middle" class="sub">25 is already the minimum of the remaining values</text>
+    <rect x="118.0" y="138" width="92" height="72" class="cell sorted"/>
+    <text x="164.0" y="182" text-anchor="middle" class="value">11</text>
+    <text x="164.0" y="230" text-anchor="middle" class="index">index 0</text>
+    <rect x="226.0" y="138" width="92" height="72" class="cell sorted"/>
+    <text x="272.0" y="182" text-anchor="middle" class="value">12</text>
+    <text x="272.0" y="230" text-anchor="middle" class="index">index 1</text>
+    <rect x="334.0" y="138" width="92" height="72" class="cell sorted"/>
+    <text x="380.0" y="182" text-anchor="middle" class="value">22</text>
+    <text x="380.0" y="230" text-anchor="middle" class="index">index 2</text>
+    <rect x="442.0" y="138" width="92" height="72" class="cell sorted minimum"/>
+    <text x="488.0" y="182" text-anchor="middle" class="value">25</text>
+    <text x="488.0" y="230" text-anchor="middle" class="index">index 3</text>
+    <rect x="550.0" y="138" width="92" height="72" class="cell compare"/>
+    <text x="596.0" y="182" text-anchor="middle" class="value">64</text>
+    <text x="596.0" y="230" text-anchor="middle" class="index">index 4</text>
+    <text x="380.0" y="268" text-anchor="middle" class="note">No swap needed</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.02;0.90;1" dur="1.500s" begin="12.000s" fill="freeze" repeatCount="1"/>
+    <text x="380.0" y="42" text-anchor="middle" class="heading">Sorted</text>
+    <text x="380.0" y="68" text-anchor="middle" class="sub">Selection sort complete</text>
+    <rect x="118.0" y="138" width="92" height="72" class="cell sorted"/>
+    <text x="164.0" y="182" text-anchor="middle" class="value">11</text>
+    <text x="164.0" y="230" text-anchor="middle" class="index">index 0</text>
+    <rect x="226.0" y="138" width="92" height="72" class="cell sorted"/>
+    <text x="272.0" y="182" text-anchor="middle" class="value">12</text>
+    <text x="272.0" y="230" text-anchor="middle" class="index">index 1</text>
+    <rect x="334.0" y="138" width="92" height="72" class="cell sorted"/>
+    <text x="380.0" y="182" text-anchor="middle" class="value">22</text>
+    <text x="380.0" y="230" text-anchor="middle" class="index">index 2</text>
+    <rect x="442.0" y="138" width="92" height="72" class="cell sorted"/>
+    <text x="488.0" y="182" text-anchor="middle" class="value">25</text>
+    <text x="488.0" y="230" text-anchor="middle" class="index">index 3</text>
+    <rect x="550.0" y="138" width="92" height="72" class="cell sorted"/>
+    <text x="596.0" y="182" text-anchor="middle" class="value">64</text>
+    <text x="596.0" y="230" text-anchor="middle" class="index">index 4</text>
+    <text x="380.0" y="268" text-anchor="middle" class="note">Result: [11, 12, 22, 25, 64]</text>
+  </g>
+
+  <g transform="translate(165 302)">
+    <rect x="0" y="-12" width="18" height="18" class="sorted"/>
+    <text x="26" y="2" class="legend">sorted</text>
+    <rect x="122" y="-12" width="18" height="18" class="minimum"/>
+    <text x="148" y="2" class="legend">minimum</text>
+    <rect x="278" y="-12" width="18" height="18" class="compare"/>
+    <text x="304" y="2" class="legend">comparison</text>
+  </g>
+</svg>
